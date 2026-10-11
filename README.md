@@ -3,6 +3,7 @@
 Open hardware from ArmDojo. The first design here is a **printable 5-axis desktop robot arm with a gripper**, driven by six Feetech STS3215 serial bus servos.
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-print%20profile-00AE42)](https://makerworld.com/en/models/3421988-5-axis-desktop-robot-arm-for-sts3215-servos)
 [![Discord](https://img.shields.io/badge/Discord-join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/MdyRuJVFAm)
 
 **💬 Questions, build help and show-and-tell: [join our Discord](https://discord.gg/MdyRuJVFAm).**
@@ -117,7 +118,7 @@ We are writing the control code now that our own arm is assembled. It will be op
 ## Community
 
 - **Discord:** https://discord.gg/MdyRuJVFAm. Use the channels `#build-help`, `#printing`, `#software-control` and `#showcase`.
-- **MakerWorld:** search "5-Axis Desktop Robot Arm for STS3215 Servos". The print profile can be opened directly in Bambu Studio.
+- **MakerWorld:** [3421988-5-axis-desktop-robot-arm-for-sts3215-servos](https://makerworld.com/en/models/3421988-5-axis-desktop-robot-arm-for-sts3215-servos). The print profile can be opened directly in Bambu Studio.
 - Issues and pull requests are welcome.
 
 ## License
