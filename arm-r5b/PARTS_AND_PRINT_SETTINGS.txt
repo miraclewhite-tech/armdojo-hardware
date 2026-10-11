@@ -1,0 +1,175 @@
+ArmDojo 5-axis robot arm - printable parts (STL + STEP)
+=======================================================
+
+SO-101-derived desktop arm: 5 positioning axes + 1 gripper, six STS3215-family
+servos (ST-3215-C018, 12 V, 1:345). Current build: R5B (reinforced wrist and
+gripper). AD28 camera platform is optional.
+
+STL/   print-oriented meshes (lowest Z = 0), one file per part.
+STEP/  *_print.step solids in the same print orientation.
+No servo CAD and no assembly files are included.
+
+Servo IDs: ID1 base yaw, ID2 shoulder lift, ID3 elbow flex, ID4 wrist pitch,
+ID5 wrist roll, ID6 gripper. All ID1-ID6 are 12 V C018 1:345; do not mix 7.4 V
+STS3215 variants on the same 12 V bus.
+
+PARTS (print quantity)
+Part         Qty  Material   File (STL/)
+--------------------------------------------------------------
+AD10           1  PLA Basic  AD10_Base_Stand_R2.stl
+AD11           1  PLA Basic  AD11_Output_Case_Cap_R2.stl
+AD12           1  PLA Basic  AD12_Shoulder_Carrier_R3.stl
+AD13           1  PLA Basic  AD13_Lower_Yaw_Arm_R2.stl
+AD14           1  PLA Basic  AD14_Upper_Arm_Drive_R3.stl
+AD15           1  PLA Basic  AD15_Upper_Arm_Rear_R3.stl
+AD16           2  PLA Basic  AD16_Cross_Brace_R3.stl
+AD17           1  PLA Basic  AD17_Elbow_Carrier_R4.stl
+AD18           1  PLA Basic  AD18_Forearm_Drive_R4.stl
+AD19           1  PLA Basic  AD19_Forearm_Rear_R4.stl
+AD20           1  PLA Basic  AD20_Wrist_Pitch_Carrier_R5.stl
+AD21           1  PLA Basic  AD21_Wrist_Pitch_Drive_R5B.stl
+AD22           1  PLA Basic  AD22_Wrist_Pitch_Rear_R5B.stl
+AD23           1  PLA Basic  AD23_Wrist_Roll_Case_R5.stl
+AD24           1  PLA Basic  AD24_Gripper_Cartridge_R5B.stl
+AD25           1  PLA Basic  AD25_Gripper_Moving_Jaw_R5B.stl
+AD26           1  TPU 95A    AD26_Moving_Pad_TPU_R5B.stl
+AD27           1  TPU 95A    AD27_Fixed_Pad_TPU_R5B.stl
+AD28 (opt.)    1  PLA Basic  AD28_ID5_Camera_Platform_R6.stl
+AD29           1  PLA Basic  AD29_Moving_Pad_Keeper_R5B.stl
+AD30           1  PLA Basic  AD30_Fixed_Pad_Keeper_R5B.stl
+AD31           1  PLA Basic  AD31_Roll_Drive_Adapter_R5B.stl
+AD32           1  PLA Basic  AD32_Roll_Rear_C_Yoke_R5B.stl
+
+Required: 21 PLA prints (AD16 x2) + 2 TPU 95A liners. Optional: AD28.
+AD17 and AD20 are identical meshes but two separate parts (elbow and wrist
+pitch) - print both. AD16 is printed twice.
+
+PRINT NOTES
+Common PLA settings (fit-verified on our prints): 0.20 mm layers, classic
+walls, XY hole/contour compensation 0, elephant-foot 0.15 mm, outer wall
+60 mm/s at 2000 mm/s2, 220 C nozzle, textured PEI 55 C, no brim.
+TPU 95A liners: 230 C / 45 C, max 3.6 mm3/s, 3 walls, 7 bottom / 4 top,
+no brim, print by object; on an A1 feed TPU from the external spool holder.
+
+AD10  Base stand
+    orientation: as in STL, base plate on bed
+    supports:    none (window and nut-slot roofs bridge)
+    as printed:  4 walls / 5+5 / 30% gyroid
+AD11  ID1 output-face case cap
+    orientation: flat, as in STL
+    supports:    none
+    as printed:  4 walls / 5+5 / 25% gyroid
+AD12  Shoulder carrier (holds ID2); replaces R2 AD12
+    orientation: as in STL
+    supports:    LOCAL only: frame underside (1.44 mm off bed), top of the 45.62 mm window, undersides of the two upper 1.6 mm screw islands
+    as printed:  5 walls / 5+5 / 40% gyroid
+AD13  Lower yaw arm on ID1 rear horn (R2 shape reused)
+    orientation: flat 4 mm plate
+    supports:    none
+    as printed:  4 walls / 10+10 (solid)
+AD14  Upper arm, drive side
+    orientation: outer face down, horn pads up
+    supports:    none
+    as printed:  4 walls / 10+10 (solid)
+AD15  Upper arm, rear side
+    orientation: outer face down, horn pads up
+    supports:    none
+    as printed:  4 walls / 10+10 (solid)
+AD16  Cross brace: upper arm @60 mm + forearm @50 mm (R4 'Extra' STL is byte-identical)
+    orientation: as in STL
+    supports:    none
+    as printed:  4 walls / 5+5 / 30% gyroid
+AD17  Elbow carrier (holds ID3), upper-arm end
+    orientation: as in STL (65 mm tall)
+    supports:    LOCAL only: frame wings, undersides of the 4 screw islands; window top beam bridges (keeps nut entries clear)
+    as printed:  6 walls / 5+5 / 40% gyroid
+AD18  Forearm, drive side
+    orientation: outer face down, pads up
+    supports:    none
+    as printed:  4 walls / 10+10 (solid)
+AD19  Forearm, rear side
+    orientation: outer face down, pads up
+    supports:    none
+    as printed:  4 walls / 10+10 (solid)
+AD20  Wrist-pitch carrier (holds ID4), forearm end; STL byte-identical to AD17 - a second copy is needed
+    orientation: as AD17
+    supports:    as AD17
+    as printed:  6 walls / 5+5 / 40% gyroid
+AD21  Wrist-pitch drive-side plate (R5B)
+    orientation: outer face down, horn boss up (as in STL)
+    supports:    none
+    as printed:  4 walls / 10+10 (solid)
+AD22  Wrist-pitch rear plate (R5B)
+    orientation: outer face down, horn boss up (as in STL)
+    supports:    none
+    as printed:  4 walls / 10+10 (solid)
+AD23  Wrist-roll case (holds ID5), R5 reused
+    orientation: as in STL
+    supports:    none
+    as printed:  6 walls / 5+5 / 40% gyroid
+AD24  Removable gripper cartridge / fixed finger (holds ID6), R5B
+    orientation: as in STL; servo frame floats 6.8 mm above bed
+    supports:    LOCAL only: frame underside, 4 screw islands (keep the 2.2 mm holes clear), 2 module ears; leave the TPU groove roof unsupported
+    as printed:  6 walls / 5+5 / 40% gyroid
+AD25  Moving jaw with inner groove (R5B)
+    orientation: flat
+    supports:    none
+    as printed:  4 walls / 10+10 (solid)
+AD26  Moving-jaw inner TPU liner (R5B)
+    orientation: large outer face down
+    supports:    none; no brim; print by object
+    as printed:  3 walls / bottom 7 / top 4 / 25% gyroid / seam back
+AD27  Fixed-finger inner TPU liner (R5B)
+    orientation: large outer face down (sliced turned 180 deg about Z)
+    supports:    none; no brim; print by object
+    as printed:  3 walls / bottom 7 / top 4 / 25% gyroid / seam back
+AD28 (opt.)  (Optional) camera platform on ID5
+    orientation: platform on bed, mounting feet up
+    supports:    none
+    as printed:  5 walls / 8+8 / 30% gyroid
+AD29  Moving-liner rigid keeper (2 holes), R5B
+    orientation: FLIP 180 deg about X: nut pockets on bed, hard-stop bosses up
+    supports:    none when flipped (STL is in drawing orientation, bosses down)
+    as printed:  5 walls / 10+10 / 40%
+AD30  Fixed-liner rigid keeper (3 holes), R5B
+    orientation: FLIP 180 deg about X: nut pockets on bed, hard-stop bosses up
+    supports:    none when flipped
+    as printed:  5 walls / 10+10 / 40%
+AD31  Wrist-roll front drive adapter (ID5 front horn), R5B
+    orientation: horn boss down (as in STL)
+    supports:    auto, build plate only
+    as printed:  6 walls / 5+5 / 40% gyroid
+AD32  Wrist-roll rear C-yoke (ID5 rear horn), R5B
+    orientation: as in STL, long beam on its side
+    supports:    none
+    as printed:  6 walls / 5+5 / 40% gyroid
+
+HARDWARE (whole arm, no washers in the checked screw stacks)
+  Servo ST-3215-C018 12 V 1:345 ............ 6
+  Servo metal horns (stock) ................ 11 (ID1-ID5 front+rear, ID6 front)
+  Horn center screws (stock) ............... 6
+  Servo case screws, stock spec, 5 mm ...... 24 (not M3)
+  M3x6 ...................................... 4
+  M3x8 ..................................... 40
+  M3x10 ..................................... 6 (2 with camera platform)
+  M3x12 .................................... 29 (33 with camera platform)
+  M3 hex nut, standard 5.5 AF x 2.4 mm ..... 35 (not nyloc)
+  Base mounting: 4x M4 through 4.5 mm holes, 104 x 76 mm pattern
+  Camera (optional): M4x10 + M4 nut; the four AD23 screws become M3x12
+
+LIMITS
+No payload rating. The arm is long for its servos: at full horizontal reach
+the shoulder carries a large static load. Support the arm when testing, avoid
+holding it fully stretched out for long periods, and keep early moves slow
+with a low torque limit. Wrist roll is designed for -90..+90 deg (not
+continuous). Gripper pads nearly touch at zero (~0.4 mm): calibrate the
+gripper at low current and stop when the pads meet.
+
+A matching Bambu Studio project for the Bambu Lab A1 0.4 mm nozzle is
+provided in print-profile/ (5 plates, about 14 h 57 min and 303 g in total).
+
+License: ArmDojo parts are licensed under Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0), see LICENSE at the
+repository root. The design is partly derived from SO-ARM100 by TheRobotStudio
+and Hugging Face (Apache License 2.0); the upstream license text and
+attribution are kept in LICENSE-Apache-2.0-upstream.txt and NOTICE.

@@ -1,0 +1,28 @@
+ArmDojo Hardware
+Copyright 2026 ArmDojo contributors.
+
+The ArmDojo printable part geometry in this repository (STL, STEP, 3MF,
+renders, assembly images and documents) is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License (see LICENSE).
+
+UPSTREAM SOURCE AND ATTRIBUTION
+
+The arm is derived from the SO-101 arm by TheRobotStudio, in collaboration
+with Hugging Face:
+  https://github.com/TheRobotStudio/SO-ARM100
+  Pinned commit: eecbe3e0a9ebb23e25ad7b2759b03884c6660903
+  License: Apache License, Version 2.0 (text in LICENSE-Apache-2.0-upstream.txt)
+
+The mechanism layout and servo-interface context derive from that source.
+ArmDojo changes: new base stand and case cap, split yaw carrier, open-frame
+servo carriers, new link lengths (shoulder-elbow 165 mm, elbow-wrist 145 mm),
+new elbow, wrist and rotating gripper, inner TPU gripper liners with rigid
+keepers, front/rear wrist-roll support, and a camera platform. No upstream
+files are redistributed unchanged in this repository.
+
+Servo dimensions were checked against the servo manufacturer's CAD model, used
+only as a local reference; that model is not included here.
+
+ArmDojo is an independent project. No endorsement by TheRobotStudio, Hugging
+Face or any component maker is implied. Product and project names only
+identify sources and compatibility targets.
